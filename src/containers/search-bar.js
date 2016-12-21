@@ -7,7 +7,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { term: ''}
+    this.state = { term: '' }
 
     // this is SearchBar
     this.onInputChange = this.onInputChange.bind(this);
@@ -22,7 +22,7 @@ class SearchBar extends Component {
     event.preventDefault();
 
     this.props.fetchWeather(this.state.term);
-    this.setState({ term: '' })
+    this.setState({ term: '' });
   }
 
   render() {
@@ -32,7 +32,7 @@ class SearchBar extends Component {
           type="text"
           className="form-control"
           placeholder="Get a five-day forecast in your favorite cities"
-          value={this.props.term}
+          value={this.state.term}
           onChange={this.onInputChange}
         />
         <span className="input-group-btn">
