@@ -9,7 +9,7 @@ class SearchBar extends Component {
 
     this.state = { term: '' }
 
-    // this is SearchBar
+    // 'this' is the SearchBar class
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
@@ -43,8 +43,8 @@ class SearchBar extends Component {
   }
 }
 
-function mapDispatchProps(dispatch) {
+function mapDispatchToProps(dispatch) {
   return bindActionCreators( { fetchWeather }, dispatch)
 }
 
-export default connect(null, mapDispatchProps)(SearchBar)
+export default connect(null, mapDispatchToProps)(SearchBar)
